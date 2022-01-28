@@ -1,0 +1,65 @@
+.winner-list {
+  margin: 0 auto;
+  width: 500px;
+	margin-top: 50px;
+}
+
+.winner-car {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+
+	& > * {
+		padding: 0px 3px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+	}
+
+	&.options {
+		margin-bottom: 5px;
+		background-color: #6495ed;
+
+		& .car-time, & .car-wins, & .list-index {
+			transition: all 0.3s ease;
+			position: relative;
+			cursor: pointer;
+
+			&.max::after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '\21BE';
+			}
+
+			&.min::after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '\21C2';
+			}
+
+			&:hover {
+				background-color: #2855a8;
+			}
+		}
+	}
+
+	.list-index {
+		width: 20px;
+	}
+
+	.car-name {
+		width: 200px;
+		text-align: start;
+	}
+
+	.car-wins {
+		width: 85px;
+	}
+
+	.car-time {
+		width: 90px;
+	}
+}

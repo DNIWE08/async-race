@@ -1,0 +1,20 @@
+.winner-popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 175px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;   
+	background-color: rgb(20, 30, 48);
+	z-index: 10;
+}
+
+.garage-cars-wrapper {
+	height: 700px;
+	overflow: hidden;
+}

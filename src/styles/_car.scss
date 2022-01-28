@@ -1,0 +1,94 @@
+.car-component {
+    
+	height: 100px;
+	padding: 5px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	opacity: 0;
+
+	transition: all 0.3s ease;
+
+	.car-track {
+		position: relative;
+		height: 35px;
+		border-top: 2px dashed rgb(255, 255, 255);
+		border-bottom: 2px dashed rgb(255, 255, 255);
+		background-color: rgb(126, 126, 126);
+	
+		&::after {
+			// content: '🏁';
+			content: '';
+			font-size: 24px;
+			position: absolute;
+			width: 3px;
+			height: 100%;
+			background-color: #fff;
+			top: 0px;
+			left: 89.7%;
+			z-index: 1;
+		}
+	}
+	
+	.car {
+		display: flex;
+		z-index: 2;
+		position: absolute;
+		top: 0px;
+		left: 0%;
+	
+		&.big > svg {
+			width: 50px;
+			height: 30px;
+		}
+	}
+
+	&.show {
+		opacity: 1;
+		display: flex;
+	}
+
+	.track-controlls {
+		display: flex;
+
+		& > * {
+			margin: 5px 5px 5px 0;
+		} 
+
+		.track-field-btn {
+			font-weight: bold;
+			box-shadow: 1px 1px 0 0px #fff;
+
+  		transition: all 0.2s ease;
+			color: #000;
+
+			&:hover {
+				transform: translate(1px, 1px);
+				box-shadow: none;
+			}
+
+			&.start {
+				background-color: forestgreen;
+			}
+
+			&.back {
+				background-color: tomato;
+			}
+		}
+	}
+}
+
+.raceAnimation {
+	animation-name: race;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@keyframes race {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 90%;
+	}
+}

@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    gap: 10px;
+
+    &-btn {
+        width: 150px;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+
+        &.active {
+            box-shadow: 0px 0px 0px 3px #fff;
+        }
+    }
+}
